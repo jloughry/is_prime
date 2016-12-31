@@ -46,4 +46,10 @@ test: $(TARGET) Makefile
 	@./$(TARGET) 2021
 	@./$(TARGET) 2022
 	@./$(TARGET) 2023
+	@echo Some more weird tests...long int on this machine is 32 bits
+	@./$(TARGET) 65536
+	@./$(TARGET) 65537
+	@./$(TARGET) 65538
+	@./$(TARGET) 6553765537
+	@./$(TARGET) 655376553765537
 	@echo End of tests.
