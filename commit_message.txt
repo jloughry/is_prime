@@ -1,1 +1,1 @@
-link to common.mk file
+add README, .gitignore; push to GitHub
