@@ -5,16 +5,11 @@ $(TARGET): $(source) Makefile
 	gcc -Wall -o $@ $<
 	mv $@.exe $@
 
-clean:
+clean::
 	rm -fv $(TARGET) a.exe core
 
 vi:
 	/usr/bin/vim $(source)
-
-commit:
-	make clean
-	git add -A
-	git commit 
 
 test: $(TARGET) Makefile
 	@echo Testing failure cases...
@@ -53,3 +48,6 @@ test: $(TARGET) Makefile
 	@./$(TARGET) 6553765537
 	@./$(TARGET) 655376553765537
 	@echo End of tests.
+
+include common.mk
+
